@@ -797,19 +797,12 @@ void BSKLNBaseRESPXSec2014::LoadConfig(void)
   fHAmplModelEMp    = 0;
   fHAmplModelEMn    = 0;
 
-  AlgFactory * algf = AlgFactory::Instance();
-
-  fHAmplModelCC  = dynamic_cast<const RSHelicityAmplModelI *> (
-      algf->GetAlgorithm("genie::RSHelicityAmplModelCC","Default"));
-  fHAmplModelNCp = dynamic_cast<const RSHelicityAmplModelI *> (
-      algf->GetAlgorithm("genie::RSHelicityAmplModelNCp","Default"));
-  fHAmplModelNCn = dynamic_cast<const RSHelicityAmplModelI *> (
-      algf->GetAlgorithm("genie::RSHelicityAmplModelNCn","Default"));
-  fHAmplModelEMp = dynamic_cast<const RSHelicityAmplModelI *> (
-      algf->GetAlgorithm("genie::RSHelicityAmplModelEMp","Default"));
-  fHAmplModelEMn = dynamic_cast<const RSHelicityAmplModelI *> (
-      algf->GetAlgorithm("genie::RSHelicityAmplModelEMn","Default"));
-
+  fHAmplModelCC  = dynamic_cast<const RSHelicityAmplModelI *> (this->SubAlg("RSHelicityAmplModelCC")); 
+  fHAmplModelNCp = dynamic_cast<const RSHelicityAmplModelI *> (this->SubAlg("RSHelicityAmplModelNCp")); 
+  fHAmplModelNCn = dynamic_cast<const RSHelicityAmplModelI *> (this->SubAlg("RSHelicityAmplModelNCn")); 
+  fHAmplModelEMp = dynamic_cast<const RSHelicityAmplModelI *> (this->SubAlg("RSHelicityAmplModelEMp")); 
+  fHAmplModelEMn = dynamic_cast<const RSHelicityAmplModelI *> (this->SubAlg("RSHelicityAmplModelEMn")); 
+  
   assert( fHAmplModelCC  );
   assert( fHAmplModelNCp );
   assert( fHAmplModelNCn );

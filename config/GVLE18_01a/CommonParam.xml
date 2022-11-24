@@ -355,4 +355,12 @@ Or changing the name of this parameter set
 
   </param_set>
 
+  <param_set name="RESHelicityAmplModel">
+    <param type="alg" name="RSHelicityAmplModelCC">  "genie::RSHelicityAmplModelCC" </param>
+    <param type="alg" name="RSHelicityAmplModelNCp"> "genie::RSHelicityAmplModelNCp" </param>
+    <param type="alg" name="RSHelicityAmplModelNCn"> "genie::RSHelicityAmplModelNCn" </param>
+    <param type="alg" name="RSHelicityAmplModelEMp"> "genie::RSHelicityAmplModelEMp" </param>
+    <param type="alg" name="RSHelicityAmplModelEMn"> "genie::RSHelicityAmplModelEMn" </param>
+  </param_set>
+
 </common_Param_list>

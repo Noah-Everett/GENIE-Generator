@@ -34,7 +34,7 @@ XSec-Integrator             alg     No
 
   <param_set name="Default"> 
     
-    <param type="string" name="CommonParam"> WeakInt,NonResBackground,CKM,FermiGas </param>
+    <param type="string" name="CommonParam"> WeakInt,NonResBackground,CKM,FermiGas,RESHelicityAmplModel </param>
     
     <param type="double" name="RES-CC-XSecScale"> 1.000 </param>
     <param type="double" name="RES-NC-XSecScale"> 1.000 </param>

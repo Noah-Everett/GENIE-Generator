@@ -35,8 +35,7 @@ XSec-Integrator             alg     No
 
   <param_set name="Default"> 
      
-    <param type="string"  name="CommonParam"> WeakInt,NonResBackground,CKM,FermiGas </param>
-
+    <param type="string"  name="CommonParam"> WeakInt,NonResBackground,CKM,FermiGas,RESHelicityAmplModel </param>
     
      <!--
 	 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -58,6 +57,14 @@ XSec-Integrator             alg     No
      <param type="double" name="RES-Ma"> 1.120 </param>
      <param type="double" name="RES-Mv"> 0.840 </param>
 
+     <!--
+	 Resonance Helicity Amplitude model:
+     -->
+     <param type="alg" name="RSHelicityAmplModelCC"> "genie::RSHelicityAmplModelCC" </param>
+     <param type="alg" name="RSHelicityAmplModelNCp"> "genie::RSHelicityAmplModelNCp" </param>
+     <param type="alg" name="RSHelicityAmplModelNCn"> "genie::RSHelicityAmplModelNCn" </param>
+     <param type="alg" name="RSHelicityAmplModelEMp"> "genie::RSHelicityAmplModelEMp" </param>
+     <param type="alg" name="RSHelicityAmplModelEMn"> "genie::RSHelicityAmplModelEMn" </param>
  </param_set>
  
  
@@ -74,7 +81,7 @@ XSec-Integrator             alg     No
    
   </param_set> 
 
- <param_set name="EM-WithPauliBlock"> 
+  <param_set name="EM-WithPauliBlock"> 
      <param type="alg"  name="XSec-Integrator">  genie::ReinSehgalRESXSec/WithPauliBlock    </param>
   </param_set>
 

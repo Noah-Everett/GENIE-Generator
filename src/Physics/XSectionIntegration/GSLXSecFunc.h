@@ -22,6 +22,8 @@
 #include <Math/IFunction.h>
 #include <Math/IntegratorMultiDim.h>
 
+#include <string>
+
 namespace genie {
 
 class XSecAlgorithmI;
@@ -372,7 +374,7 @@ class dXSec_dElep_AR: public ROOT::Math::IBaseFunctionOneDim
 {
 public:
   dXSec_dElep_AR(const XSecAlgorithmI * m, const Interaction * i,
-                 string gsl_nd_integrator_type, double gsl_relative_tolerance,
+                 std::string gsl_nd_integrator_type, double gsl_relative_tolerance,
                  unsigned int max_n_calls);
   dXSec_dElep_AR() {};
  ~dXSec_dElep_AR();
@@ -392,7 +394,7 @@ private:
   double kine_min[3];
   double kine_max[3];
   
-  string fGSLIntegratorType;
+  std::string fGSLIntegratorType;
   double fGSLRelTol;
   unsigned int fGSLMaxCalls;
 };
